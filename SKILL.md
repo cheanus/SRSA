@@ -18,13 +18,20 @@ Use SRSA's command-line workflow to drive efficient agent reviews and turn each 
 
 ## Command Cheat Sheet
 ```bash
+# Print total cards, today's review progress, future due cards and average retrievability
 uv run python scripts/main.py status
-uv run python scripts/main.py review get-question
-uv run python scripts/main.py review get-answer
-uv run python scripts/main.py review rate [again|hard|good|easy]
+# Create a new card
 uv run python scripts/main.py card new -q "question" -a "answer"
+# Override an existing card
 uv run python scripts/main.py card override [CARD_ID] -q "question" -a "answer"
+# Remove a card
 uv run python scripts/main.py card rm [CARD_ID]
+# Get a question and its CARD_ID
+uv run python scripts/main.py review get-question
+# Get the answer and CARD_ID of the current question
+uv run python scripts/main.py review get-answer
+# Rate the review result, then print historical accuracy, today's review progress and retrievability change
+uv run python scripts/main.py review rate [again|hard|good|easy]
 ```
 
 ## Review Loop

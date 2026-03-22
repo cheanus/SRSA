@@ -291,4 +291,4 @@ if __name__ == "__main__":
     except (FileNotFoundError, ValueError) as exc:
         sys.exit(_print_error(str(exc)))
     except KeyboardInterrupt:
-        sys.exit(_print_error("已中断。"))
+        sys.exit(_print_error("Interrupted."))
