@@ -177,13 +177,15 @@ Action:
 Update memory with the new information about international news.
 ```
 
-## References
+## Credits
 
 - [Free Spaced Repetition Scheduling Algorithm](https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler)
 
 - [FSRS python package](https://open-spaced-repetition.github.io/py-fsrs/fsrs.html)
 
 - [Spaced Repetition Research](https://supermemo.guru/wiki/Spaced_repetition)
+
+- [Linux Do](https://linux.do/)
 
 ## License
 
