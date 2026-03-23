@@ -111,18 +111,12 @@ git clone https://github.com/cheanus/SRSA
 cd SRSA
 ```
 
-Install dependencies:
-
-```bash
-uv sync
-```
-
-Add a new card:
+Add a new card (or directly ask the agent to generate cards from its memory):
 
 ```bash
 uv run python scripts/main.py card new \
--q "What is the vector database used in this agent?" \
--a "Weaviate"
+-q "What is the capital of France?" \
+-a "Paris"
 ```
 
 Finally, ask the agent to read the skill and run review sessions daily or on demand.
