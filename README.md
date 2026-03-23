@@ -185,6 +185,8 @@ Update memory with the new information about international news.
 
 - [Spaced Repetition Research](https://supermemo.guru/wiki/Spaced_repetition)
 
+- [Memory-R1](https://arxiv.org/abs/2508.19828)
+
 - [Linux Do](https://linux.do/)
 
 ## License
