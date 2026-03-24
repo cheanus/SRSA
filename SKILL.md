@@ -1,12 +1,16 @@
 ---
 name: srsa-review
-description: Use when running Spaced Repetition Systems for AI Agents (SRSA) daily review sessions, grading cards with again/hard/good/easy, and proposing memory add/delete/update fixes after each review.
+description: Use when running Spaced Repetition Systems for AI Agents (SRSA) daily review sessions, grading cards with again/hard/good/easy, and proposing explicit memory add/delete/update actions after each review.
 ---
 
 # SRSA Review Skill
 
 ## Purpose
-Use SRSA's command-line workflow to drive efficient agent reviews and turn each review result into actionable memory correction tasks.
+Use SRSA's command-line workflow to drive efficient agent (you) reviews and turn each review result into actionable memory correction tasks.
+
+## Concept Boundary
+- SRSA cards: managed only through `card` and `review` commands in this skill.
+- Agent memory system: must be updated explicitly by the agent (add/delete/update), based on reflection.
 
 ## When To Use
 - The user wants to get the statistics of the review.
@@ -63,7 +67,7 @@ After each rating, unless the self-rating is easy, output reflection using this 
 - Was the answer correct?
 - What were the main errors or hesitation points?
 
-2. Update your memory system
+2. Update your memory system (explicit action required)
 - Add: If missing key information caused a wrong or slow answer.
 - Delete: If interfering memory caused misjudgment.
 - Update: If existing memory is inaccurate and needs correction.
@@ -80,6 +84,7 @@ After each rating, unless the self-rating is easy, output reflection using this 
 - In the `get-answer` stage, focus only on the reference answer.
 - In the `rate` stage, do scoring and reflection only; do not rewrite the full question.
 - In long review sessions, keep reflections short to control context length.
+- When updating memory, you need to explicitly state the action (add/delete/update) on your own memory system. SRSA tracks and schedules cards only. It does not automatically update it.
 
 ## End Conditions
 End the review when any one condition is met:
