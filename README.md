@@ -1,5 +1,7 @@
 # SRSA: The Spaced Repetition Systems for Agents 
 
+[中文文档](docs/README_zh.md)
+
 **Teach your AI agent to remember — and improve its memory over time.**
 
 SRSA (Spaced Repetition Systems for AI Agents) is a **memory self-improvement layer** that converts agent memories into reviewable cards and uses spaced repetition to continuously refine them.
