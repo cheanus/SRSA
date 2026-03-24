@@ -12,13 +12,11 @@ Use SRSA's command-line workflow to drive efficient agent (you) reviews and turn
 - SRSA cards: managed only through `card` and `review` commands in this skill.
 - Agent memory system: must be updated explicitly by the agent (add/delete/update), based on reflection.
 
-## When To Use
-- The user wants to get the statistics of the review.
-- The agent need to run daily or scheduled review sessions.
-
-## Preconditions
-- Dependencies are installed: `uv sync`.
-- `scripts/config.yaml` is configured.
+## What cards need to be generated?
+- Actions that have been corrected by the user
+- User preferences
+- Decision you have hesitated to make
+- Others that the user explicitly wants you to remember
 
 ## Command Cheat Sheet
 ```bash

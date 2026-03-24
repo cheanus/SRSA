@@ -106,22 +106,13 @@ Periodic retrieval strengthens memory pathways.
 
 It is easy to integrate SRSA into your agent workflow using **skills**.
 
-Clone the repository under `skills/` directory:
+Install the skill [srsa](https://clawhub.ai/cheanus/srsa):
 
 ```bash
-git clone https://github.com/cheanus/SRSA
-cd SRSA
+clawhub install srsa
 ```
 
-Add a new card (or directly ask the agent to generate cards from its memory):
-
-```bash
-uv run python scripts/main.py card new \
--q "What is the capital of France?" \
--a "Paris"
-```
-
-Finally, ask the agent to read the skill and run review sessions daily or on demand.
+Ask the agent to read the skill, generate a card from its memory, and set a daily refresher task.
 
 ## Project Structure
 
@@ -151,6 +142,7 @@ Refer to [script.md](docs/script.md) for command usage.
 
 If daily reviews become large, recommended solutions are:
 
+- lower `desired_retention` in `config.yaml` to reduce review frequency
 - compress conversation context
 - split reviews across multiple agents
 - run multiple review sessions per day

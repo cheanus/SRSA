@@ -98,22 +98,13 @@ Improved Memory (改进后的记忆)
 
 使用**技能 (Skills)** 可以轻松地将 SRSA 集成到你的智能体工作流中。
 
-将仓库克隆到 `skills/` 目录下：
+安装[srsa](https://clawhub.ai/cheanus/srsa)技能：
 
 ```bash
-git clone https://github.com/cheanus/SRSA
-cd SRSA
+clawhub install srsa
 ```
 
-添加一张新卡片（或者直接要求智能体从其记忆中生成卡片）：
-
-```bash
-uv run python scripts/main.py card new \
--q "法国的首都是哪里？" \
--a "巴黎"
-```
-
-最后，要求智能体读取技能并每天或按需运行复习。
+要求智能体读取该技能，从它的记忆中生成卡片，并设置一个每日复习任务。
 
 ## 项目结构
 
@@ -143,6 +134,7 @@ README.md             # 英文文档
 
 如果每日复习量变大，建议的解决方案是：
 
+- 在`config.yaml`中降低`desired_retention`以减少复习频率
 - 压缩对话上下文
 - 将复习任务分配给多个智能体
 - 每天运行多次复习环节
